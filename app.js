@@ -60,6 +60,11 @@ function renderQuestion() {
     btn.addEventListener("click", () => handleSelect(i));
     optionsContainer.appendChild(btn);
   });
+  if (currentIndex === quizData.length - 1) {
+    nextBtn.textContent = "Submit";
+  } else {
+    nextBtn.textContent = "Next Question";
+  }
 }
 
 // 5) Handle selection
